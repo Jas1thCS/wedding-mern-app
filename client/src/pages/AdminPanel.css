@@ -1,0 +1,81 @@
+/* AdminPanel.css */
+.admin-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .admin-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .admin-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .admin-form button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .edit-form-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .edit-form-container h2,
+  .edit-form-container h3 {
+    color: #1e293b;
+  }
+  
+  .edit-form-container label {
+    display: block;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+  
+  .edit-form-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .edit-form-container button {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  .edit-form-container button:hover {
+    background-color: #0d9488;
+  }
+  

@@ -1,0 +1,34 @@
+.dashboard-container {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header h2 {
+    font-weight: bold;
+  }
+  
+  .message-card {
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .message-card:hover {
+    transform: scale(1.02);
+    border: 1px solid #dcdcdc;
+  }
+  
+  .edit-button {
+    background-color: #007bff;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
