@@ -44,8 +44,8 @@ const EditEvent = ({ eventData, setEventData }) => {
   return (
     <div className={styles.editContainer}>
       <h2 className={styles.title}>Edit Event Details</h2>
-      <form className={styles.editForm} onSubmit={handleSubmit}>
 
+      <form className={styles.editForm} onSubmit={handleSubmit}>
         <label>
           📆 Sangeeth Date & Time:
           <input type="datetime-local" name="sangeethDate" value={form.sangeethDate} onChange={handleChange} />
@@ -129,10 +129,57 @@ const EditEvent = ({ eventData, setEventData }) => {
             </label>
           </div>
         ))}
-
-        <button type="submit" className={styles.saveButton}>💾 Save Changes</button>
       </form>
-    </div>
+
+      {/* Sticky Footer Buttons */}
+      <div
+  style={{
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    width: '100%',
+    backgroundColor: '#1a1a1a', // Dark background for the footer
+    padding: '10px 0',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '1rem',
+    zIndex: 1000,
+    borderTop: '1px solid #333'
+  }}
+>
+  <button
+    onClick={() => navigate('/dashboard')}
+    style={{
+      padding: '12px 24px',
+      backgroundColor: '#333',
+      color: 'white',
+      border: '1px solid #555',
+      borderRadius: '6px',
+      cursor: 'pointer',
+      fontSize: '16px'
+    }}
+    type="button"
+  >
+    ⬅️ Back to Dashboard
+  </button>
+
+  <button
+    onClick={handleSubmit}
+    style={{
+      padding: '12px 24px',
+      backgroundColor: '#222',
+      color: 'white',
+      border: '1px solid #555',
+      borderRadius: '6px',
+      cursor: 'pointer',
+      fontSize: '16px'
+    }}
+    type="submit"
+  >
+    💾 Save Changes
+  </button>
+</div>
+  </div>
   );
 };
 

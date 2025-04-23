@@ -22,6 +22,19 @@ const Dashboard = () => {
     fetchMessages();
   }, []);
 
+  const deleteMessage = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this message?")) return;
+  
+    try {
+      await axios.delete(`http://localhost:5000/api/dashboard/messages/${id}`);
+      setMessages((prev) => prev.filter((msg) => msg._id !== id));
+    } catch (err) {
+      console.error('Error deleting message:', err);
+      alert('❌ Failed to delete message');
+    }
+  };
+
+
   const handleLogout = () => {
     navigate('/admin');
   };
@@ -36,6 +49,7 @@ const Dashboard = () => {
         <h2>📬 Contact Messages</h2>
         <Button variant="outline-danger" onClick={handleLogout}>Logout</Button>
       </div>
+
 
       {messages.length === 0 ? (
         <p className="text-center">No messages found.</p>
@@ -53,6 +67,7 @@ const Dashboard = () => {
                 </Card.Body>
                 <Card.Footer className="text-muted small">
                   Received on {new Date(msg.createdAt).toLocaleString()}
+                  <Button variant="danger" size="sm" onClick={() => deleteMessage(msg._id)}>🗑 Delete</Button>
                 </Card.Footer>
               </Card>
             </Col>

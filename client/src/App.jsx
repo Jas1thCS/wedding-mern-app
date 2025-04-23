@@ -9,6 +9,7 @@ import EditEvent from './pages/EditEvent';
 
 
 
+
 const HomePage = ({ eventData }) => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
