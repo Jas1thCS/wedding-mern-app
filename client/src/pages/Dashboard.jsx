@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await axios.get('/api/dashboard/messages');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/dashboard/messages`);
         setMessages(res.data);
       } catch (err) {
         console.error('Error fetching messages:', err);
