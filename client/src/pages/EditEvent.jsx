@@ -79,14 +79,13 @@ const EditEvent = ({ eventData, setEventData }) => {
           </div>
           <div className={styles.inputGroup}>
             <label className={styles.label}>
-              ⏰ Haldi Time
+              ⏰ Haldi Date & Time
               <input
-                type="text"
-                name="haldiTime"
-                value={form.haldiTime}
+                type="datetime-local"
+                name="haldiDate"
+                value={form.haldiDate}
                 onChange={handleChange}
                 className={styles.input}
-                placeholder="e.g., 10:00 AM - 12:00 PM, 15th July 2025"
               />
             </label>
           </div>
@@ -115,12 +114,11 @@ const EditEvent = ({ eventData, setEventData }) => {
             <label className={styles.label}>
               📅 Date & Time
               <input
-                type="text"
+                type="datetime-local"
                 name="travel.dateTime"
                 value={form.travel.dateTime}
                 onChange={handleChange}
                 className={styles.input}
-                placeholder="Enter wedding date and time"
               />
             </label>
           </div>

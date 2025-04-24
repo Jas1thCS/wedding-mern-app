@@ -122,9 +122,13 @@ const HomePage = ({ eventData }) => {
               <div className="home-subheader">Together with their families, invite you to celebrate their wedding</div>
               <div className="love-quote">"Every love story is beautiful, but ours is my favorite"</div>
               <div className="home-date">
-                <span className="date-icon">🗓</span> July 15th, 2025
+                <span className="date-icon">🗓</span> {new Date(eventData.travel.dateTime).toLocaleDateString('en-US', {
+                  month: 'long',
+                  day: 'numeric',
+                  year: 'numeric'
+                })}
                 <span className="separator">|</span>
-                <span className="venue-icon">🏰</span> Zee Garden Function Hall
+                <span className="venue-icon">🏰</span> {eventData.travel.destination}
               </div>
               <img src="/flowers-top.png" alt="decorative floral" className="flower-line bottom" />
               <div className="love-quote-bottom">"The best is yet to come..."</div>
@@ -198,7 +202,14 @@ const HomePage = ({ eventData }) => {
                           <div className="detail-icon">🕰</div>
                           <div className="detail-text">
                             <h4>Time</h4>
-                            <p>{eventData.haldiTime}</p>
+                            <p>{new Date(eventData.haldiDate).toLocaleString('en-US', {
+                              hour: 'numeric',
+                              minute: '2-digit',
+                              hour12: true,
+                              month: 'long',
+                              day: 'numeric',
+                              year: 'numeric'
+                            })}</p>
                           </div>
                         </div>
 
@@ -354,7 +365,11 @@ const HomePage = ({ eventData }) => {
                 <div className="detail-circle">
                   <span className="detail-icon">📅</span>
                   <h3>The Date</h3>
-                  <p>FEB 30, 2027</p>
+                  <p>{new Date(eventData.sangeethDate).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}</p>
                 </div>
                 <div className="detail-circle">
                   <span className="detail-icon">💝</span>
@@ -387,11 +402,11 @@ const HomePage = ({ eventData }) => {
               <li>🚆 <strong>By Train:</strong> {eventData.travel.train}</li>
               <li>🚗 <strong>By Road:</strong> {eventData.travel.road}</li>
             </ul>
-            <p><strong>🏨 Accommodation:</strong> We have arranged comfortable stays for our guests. For details, contact [Contact Name & Number].</p>
+            <p><strong>🏨 Accommodation:</strong> We have arranged comfortable stays for our guests. For details, contact 1 774-636-0392.</p>
             <p><strong>📜 Special Notes:</strong></p>
             <ul>
               <li>🎭 Dress Code: Traditional Indian</li>
-              <li>☀️ Weather Forecast: [General climate details]</li>
+              <li>☀️ Weather Forecast: Sunny and warm</li>
               <li>📩 RSVP by 5/21/2025</li>
             </ul>
             <p><strong>💌 We can't wait to celebrate with you!</strong></p>
@@ -534,26 +549,26 @@ const App = () => {
   const [eventData, setEventData] = useState(() => {
     const saved = localStorage.getItem('eventData');
     return saved ? JSON.parse(saved) : {
-      sangeethDate: "2025-07-14T19:00:00",
-      haldiVenue: "Zee Garden Function Hall",
-      haldiTime: "10:00 AM - 12:00 PM, 15th July 2025",
+      sangeethDate: "2025-06-01T19:00:00",
+      haldiDate: "2025-05-31T18:00:00",
+      haldiVenue: "Florian Hall",
       travel: {
-        destination: "[Venue Name, Location]",
-        dateTime: "[Wedding Date & Time]",
-        air: "[Airport Name, Code]",
-        train: "[Station Name]",
-        road: "[Highways / Roads]"
+        destination: "Florian Hall",
+        dateTime: "2025-05-31T18:00:00",
+        air: "Logan International",
+        train: "Park St Station",
+        road: "I-93"
       },
       wedding: {
-        venue: "[Your Wedding Venue Name]",
-        address: "[Wedding Venue Address]",
+        venue: "Florian Hall",
+        address: "55 Hallet St, Boston, MA 02122",
         mapLink: "https://maps.app.goo.gl/bLDcjgqaNwjhPSou8"
       },
       accommodations: [
-        { name: "Hotel Grand Palace", address: "123 Wedding Street, City, ZIP", map: "https://www.google.com/maps/place/HotelGrandPalace" },
-        { name: "Royal Heritage Hotel", address: "456 Love Avenue, City, ZIP", map: "https://www.google.com/maps/place/RoyalHeritageHotel" },
-        { name: "Cozy Stay Inn", address: "789 Romantic Lane, City, ZIP", map: "https://www.google.com/maps/place/CozyStayInn" },
-        { name: "Luxury Bliss Resort", address: "101 Dreamland Drive, City, ZIP", map: "https://www.google.com/maps/place/LuxuryBlissResort" }
+        { name: "Best Western Adams Inn Quincy-Boston", address: "29 Hancock St, Quincy, MA 02171", map: "https://www.google.com/travel/search?ts=CAESCAoCCAMKAggDGhwSGhIUCgcI6Q8QBBgcEgcI6Q8QBBgdGAEyAhAAKgcKBToDVVNE&qs=CAEyFENnc0k4Tnl1dU1IRmxiS2pBUkFCOApCCRGE4Wo6gkYy5kIJEYUBwq7y1YmsQgkRsHnXal1QL9xaVAgBMlCqAU0QASoKIgZob3RlbHMoADIfEAEiG_uZL7SzzEYvgeNgSl6Vwa81vxmYkekaKznBOTIcEAIiGGhvdGVscyBuZWFyIGZsb3JpYW4gaGFsbA&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls" },
+        { name: "Holiday Inn Express Boston - Quincy by IHG", address: "1 Arlington St, Quincy, MA 02171", map: "https://www.google.com/travel/search?ts=CAESCAoCCAMKAggDGhwSGhIUCgcI6Q8QBBgcEgcI6Q8QBBgdGAEyAhAAKgcKBToDVVNE&qs=CAEyE0Nnb0lyby1OMzVTTGw2VmZFQUU4CkIJEYThajqCRjLmQgkRhQHCrvLViaxCCRGs8xTAiwTwkVpeCAEyWqoBVxABKgoiBmhvdGVscygAMh8QASIb2x7g3Swxsj47GKh4LZ26Qt0U4q991ZSwAvoYMiYQAiIiaG90ZWxzIG5lYXIgZmxvcmlhbiBoYWxsIGJvc3RvbiBtYQ&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls" },
+        { name: "Staybridge Suites Boston-Quincy by IHG", address: "1 Arlington St, Quincy, MA 02171", map: "https://www.google.com/travel/search?ts=CAESCAoCCAMKAggDGh4SHBIUCgcI6Q8QBBgcEgcI6Q8QBBgdGAEyBAgAEAAqBwoFOgNVU0Q&qs=CAEyJ0Noa0luZHZ3azZQRDlLOHZHZzB2Wnk4eE1XWnJhM3B5WTE5aUVBRTgKQgkRhOFqOoJGMuZCCRGFAcKu8tWJrEIJEazzFMCLBPCRWl4IATJaqgFXEAEqCiIGaG90ZWxzKAAyHxABIhvbHuDdLDGyPjsYqHgtnbpC3RTir33VlLAC-hgyJhACIiJob3RlbHMgbmVhciBmbG9yaWFuIGhhbGwgYm9zdG9uIG1h&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls" },
+        { name: "Marriott Boston Quincy", address: "1000 Marriott Dr, Quincy, MA 02169", map: "https://www.google.com/travel/search?ts=CAESCAoCCAMKAggDGh4SHBIUCgcI6Q8QBBgcEgcI6Q8QBBgdGAEyBAgAEAAqBwoFOgNVU0Q&qs=CAEyJkNoZ0kzWnF5ODdERC1NTFpBUm9MTDJjdk1YWnFOakEyYW5NUUFROApCCRGE4Wo6gkYy5kIJEYUBwq7y1YmsQgkRrPMUwIsE8JFIAFpeCAEyWqoBVxABKgoiBmhvdGVscygAMh8QASIb2x7g3Swxsj47GKh4LZ26Qt0U4q991ZSwAvoYMiYQAiIiaG90ZWxzIG5lYXIgZmxvcmlhbiBoYWxsIGJvc3RvbiBtYQ&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls" }
       ]
     };
   });
