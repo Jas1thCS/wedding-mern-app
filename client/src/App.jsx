@@ -434,24 +434,11 @@ const HomePage = ({ eventData }) => {
                 <h2>Stay Connected</h2>
                 <span className="title-decoration">💌</span>
               </div>
-              <p className="contact-subtitle">"We'd love to hear from you and answer any questions!"</p>
+              <p className="contact-subtitle">Want to send a message to us? We'd love to hear from you!</p>
             </div>
             
             <div className="contact-content">
               <div className="contact-info-cards">
-                <div className="contact-card venue-card">
-                  <div className="card-icon">🏰</div>
-                  <h3>Venue Address</h3>
-                  <div className="card-content">
-                    <p>Zee Garden Function Hall</p>
-                    <p>123 Wedding Lane, City, ZIP</p>
-                    <a href="#" className="venue-direction-btn">
-                      <span>Get Directions</span>
-                      <span className="btn-icon">🗺️</span>
-                    </a>
-                  </div>
-                </div>
-
                 <div className="contact-card connect-card">
                   <div className="card-icon">📱</div>
                   <h3>Connect With Us</h3>
