@@ -106,72 +106,273 @@ const HomePage = ({ eventData }) => {
     <>
       <Navbar />
       
-        <section id="home" className="section" data-bg="/Home.jpg"></section>
+        <section id="home" className="home-container">
+          <div className="floating-hearts">
+            <span>❤️</span>
+            <span>💝</span>
+            <span>💖</span>
+            <span>💕</span>
+            <span>💘</span>
+          </div>
+          <div className="home-content-wrapper">
+            <div className="circular-content">
+              <div className="love-quote-top">"Two hearts, one love, forever together"</div>
+              <img src="/flowers-top.png" alt="decorative floral" className="flower-line top" />
+              <div className="home-header">Manohar <span className="heart-symbol">💑</span> Kartrina kaif</div>
+              <div className="home-subheader">Together with their families, invite you to celebrate their wedding</div>
+              <div className="love-quote">"Every love story is beautiful, but ours is my favorite"</div>
+              <div className="home-date">
+                <span className="date-icon">🗓</span> July 15th, 2025
+                <span className="separator">|</span>
+                <span className="venue-icon">🏰</span> Zee Garden Function Hall
+              </div>
+              <img src="/flowers-top.png" alt="decorative floral" className="flower-line bottom" />
+              <div className="love-quote-bottom">"The best is yet to come..."</div>
+            </div>
+          </div>
+          <div className="floating-hearts right">
+            <span>💗</span>
+            <span>💓</span>
+            <span>💞</span>
+            <span>💝</span>
+            <span>❤️</span>
+          </div>
+        </section>
 
         <section id="haldi" className="section" data-bg="/Haldhi2.png">
-          <div className="haldi-overlay">
-            <div className="haldi-content">
-              <h2>💛 Haldi Ceremony 💛</h2>
-              <p>Celebrate the sacred turmeric ritual with love, music, and laughter.</p>
-              <div className="haldi-grid">
-                <img src="/HaldhiHands.png" alt="Haldi Ritual" className="haldi-img fade-in" />
-                <div className="haldi-details">
-                  <h3>📍 Venue:</h3>
-                  <p>{eventData.haldiVenue}</p>
-                  <h3>🕰 Time:</h3>
-                  <p>{eventData.haldiTime}</p>
-                  <h3>👗 Dress Code:</h3>
-                  <p>Yellow Traditional Attire</p>
+          <div className="section-transition top"></div>
+          <div className="haldi-container">
+            <div className="haldi-decorative-border">
+              <div className="corner top-left"></div>
+              <div className="corner top-right"></div>
+              <div className="corner bottom-left"></div>
+              <div className="corner bottom-right"></div>
+              
+              <div className="haldi-content">
+                <div className="section-title haldi-title">
+                  <div className="title-decoration">
+                    <img src="/mandala-decoration.png" alt="Mandala" className="mandala-img" />
+                  </div>
+                  <h2>The Haldi Ceremony</h2>
+                  <div className="title-decoration">
+                    <img src="/mandala-decoration.png" alt="Mandala" className="mandala-img" />
+                  </div>
                 </div>
-                <img src="/Haldhi3.png" alt="Traditional Setup" className="haldi-img fade-in" />
-              </div>
-              <div className="haldi-decorations">
-                <img src="/Marigold.png" alt="Marigold Garland" className="marigold floating" />
-                <img src="/Banana.png" alt="Banana Leaf" className="banana-leaf floating" />
-                <img src="/Coconut.png" alt="Coconut" className="coconut floating" />
+
+                <div className="haldi-quotes">
+                  <p className="main-quote">"The auspicious beginning of a beautiful journey"</p>
+                  <p className="sub-quote">"Where tradition meets celebration in a splash of golden hues"</p>
+                </div>
+
+                <div className="haldi-grid">
+                  <div className="haldi-image-wrapper left">
+                    <div className="image-frame">
+                      <img src="/HaldhiHands.png" alt="Haldi Ritual" className="haldi-img fade-in" />
+                      <div className="image-overlay">
+                        <span className="overlay-text">Sacred Traditions</span>
+                        <p className="overlay-description">The blessing of turmeric marks the beginning of the celebrations</p>
+                      </div>
+                    </div>
+                    <div className="decorative-elements">
+                      <img src="/flower-corner.png" alt="Decorative Corner" className="corner-decoration" />
+                    </div>
+                  </div>
+
+                  <div className="haldi-details-container">
+                    <div className="details-card">
+                      <div className="card-header">
+                        <span className="card-icon">✨</span>
+                        <h3>Ceremony Details</h3>
+                      </div>
+                      
+                      <div className="detail-items">
+                        <div className="detail-item venue">
+                          <div className="detail-icon">🏰</div>
+                          <div className="detail-text">
+                            <h4>Venue</h4>
+                            <p>{eventData.haldiVenue}</p>
+                          </div>
+                        </div>
+
+                        <div className="detail-item time">
+                          <div className="detail-icon">🕰</div>
+                          <div className="detail-text">
+                            <h4>Time</h4>
+                            <p>{eventData.haldiTime}</p>
+                          </div>
+                        </div>
+
+                        <div className="detail-item dress">
+                          <div className="detail-icon">👗</div>
+                          <div className="detail-text">
+                            <h4>Dress Code</h4>
+                            <p>Traditional Yellow Attire</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="ceremony-note">
+                        <p>"Join us in this auspicious ceremony as we embrace the glow of tradition"</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="haldi-image-wrapper right">
+                    <div className="image-frame">
+                      <img src="/Haldhi3.png" alt="Traditional Setup" className="haldi-img fade-in" />
+                      <div className="image-overlay">
+                        <span className="overlay-text">Festive Moments</span>
+                        <p className="overlay-description">Celebrating with colors, music, and joy</p>
+                      </div>
+                    </div>
+                    <div className="decorative-elements">
+                      <img src="/flower-corner.png" alt="Decorative Corner" className="corner-decoration" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="haldi-traditions">
+                  <div className="tradition-items">
+                    <div className="tradition-item">
+                      <span className="tradition-icon">🌺</span>
+                      <p>Traditional Rituals</p>
+                    </div>
+                    <div className="tradition-item">
+                      <span className="tradition-icon">🎵</span>
+                      <p>Folk Music</p>
+                    </div>
+                    <div className="tradition-item">
+                      <span className="tradition-icon">💃</span>
+                      <p>Dance & Celebration</p>
+                    </div>
+                    <div className="tradition-item">
+                      <span className="tradition-icon">🍱</span>
+                      <p>Traditional Feast</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="floating-elements">
+                  <img src="/Marigold.png" alt="Marigold" className="float-item marigold" />
+                  <img src="/Banana.png" alt="Banana Leaf" className="float-item banana-leaf" />
+                  <img src="/Coconut.png" alt="Coconut" className="float-item coconut" />
+                  <div className="sparkle sparkle-1"></div>
+                  <div className="sparkle sparkle-2"></div>
+                  <div className="sparkle sparkle-3"></div>
+                </div>
               </div>
             </div>
           </div>
+          <div className="section-transition bottom"></div>
         </section>
 
         <section id="sangeeth" className="section" data-bg="/Sangeeth.jpg">
-          <div className="overlay">
-            <div className="content">
-              <h2>Sangeeth Ceremony</h2>
-              <p className="subtitle">A night of music, dance, and celebration!</p>
-              <div className="highlights">
-                <div className="highlight-item"><div className="icon">🎶</div><p>Live Music Performances</p></div>
-                <div className="highlight-item"><div className="icon">💃</div><p>Dance Performances</p></div>
-                <div className="highlight-item"><div className="icon">🎤</div><p>Karaoke & Fun Activities</p></div>
+          <div className="section-transition top"></div>
+          <div className="overlay sangeeth-overlay">
+            <div className="content sangeeth-content">
+              <div className="section-title">
+                <span className="title-decoration">♫</span>
+                <h2>Sangeeth Night</h2>
+                <span className="title-decoration">♫</span>
               </div>
-              <div className="countdown">
-              <h3>Countdown to Sangeeth</h3>
-              <div id="timer">
-                <span id="days"></span> Days
-                <span id="hours"></span> Hours
-                <span id="minutes"></span> Minutes
-                <span id="seconds"></span> Seconds
+              <p className="ceremony-quote">"Where music meets love, and dance celebrates joy..."</p>
+              
+              <div className="highlights-container">
+                <div className="highlight-item">
+                  <div className="highlight-icon">🎵</div>
+                  <p>Live Music</p>
+                  <div className="highlight-details">Experience the magic of melodious tunes</div>
+                </div>
+                <div className="highlight-item">
+                  <div className="highlight-icon">💃</div>
+                  <p>Dance Performances</p>
+                  <div className="highlight-details">Witness spectacular choreographies</div>
+                </div>
+                <div className="highlight-item">
+                  <div className="highlight-icon">✨</div>
+                  <p>Cultural Show</p>
+                  <div className="highlight-details">Celebrate our rich traditions</div>
+                </div>
               </div>
-            </div>
+
+              <div className="event-timing">
+                <div className="timing-circle">
+                  <div className="timing-content">
+                    <h3>When Dreams Come Alive</h3>
+                    <p>Evening of Joy and Celebration</p>
+                    <div className="countdown-timer">
+                      <div id="timer">
+                        <span id="days"></span> Days
+                        <span id="hours"></span> Hours
+                        <span id="minutes"></span> Minutes
+                        <span id="seconds"></span> Seconds
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="gallery">
-                <h3>Gallery</h3>
+                <h3>Glimpses of Joy</h3>
                 <div className="gallery-images">
-                  <img src="/sangeeth1.JPG" alt="Sangeeth Image 1" />
-                  <img src="/sangeeth2.JPG" alt="Sangeeth Image 2" />
-                  <img src="/sangeeth3.JPG" alt="Sangeeth Image 3" />
+                  <div className="gallery-item">
+                    <img src="/sangeeth1.JPG" alt="Sangeeth Image 1" />
+                    <div className="gallery-overlay">
+                      <span>Moments of Love</span>
+                    </div>
+                  </div>
+                  <div className="gallery-item">
+                    <img src="/sangeeth2.JPG" alt="Sangeeth Image 2" />
+                    <div className="gallery-overlay">
+                      <span>Dancing Hearts</span>
+                    </div>
+                  </div>
+                  <div className="gallery-item">
+                    <img src="/sangeeth3.JPG" alt="Sangeeth Image 3" />
+                    <div className="gallery-overlay">
+                      <span>Musical Evening</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="section-transition bottom"></div>
         </section>
 
         <section id="engagement" className="section" data-bg="/Engage.jpg">
-          <div className="content">
-            <h2>✨ A Promise for Forever ✨</h2>
-            <p>"Two hearts, one journey, forever entwined."</p>
-            <p>We are thrilled to announce that we got engaged on <strong>FEB 30, 2027</strong>! 💍</p>
-            <p>A beautiful beginning to a lifetime of love and happiness.</p>
+          <div className="section-transition top"></div>
+          <div className="overlay engagement-overlay">
+            <div className="content engagement-content">
+              <div className="section-title">
+                <span className="title-decoration">💍</span>
+                <h2>The Promise</h2>
+                <span className="title-decoration">💍</span>
+              </div>
+              <div className="engagement-quote">"Every love story is beautiful, but ours is my favorite"</div>
+              <div className="engagement-details">
+                <div className="detail-circle">
+                  <span className="detail-icon">📅</span>
+                  <h3>The Date</h3>
+                  <p>FEB 30, 2027</p>
+                </div>
+                <div className="detail-circle">
+                  <span className="detail-icon">💝</span>
+                  <h3>The Moment</h3>
+                  <p>When Two Hearts Said Yes</p>
+                </div>
+                <div className="detail-circle">
+                  <span className="detail-icon">✨</span>
+                  <h3>The Beginning</h3>
+                  <p>Of Our Forever</p>
+                </div>
+              </div>
+              <p className="engagement-message">
+                "Two hearts, one love, a promise of forever. Join us as we celebrate this beautiful beginning."
+              </p>
+            </div>
           </div>
+          <div className="section-transition bottom"></div>
         </section>
 
         <section id="travel-details" className="section" data-bg="/TravelDetails.webp">
@@ -193,7 +394,7 @@ const HomePage = ({ eventData }) => {
               <li>☀️ Weather Forecast: [General climate details]</li>
               <li>📩 RSVP by 5/21/2025</li>
             </ul>
-            <p><strong>💌 We can’t wait to celebrate with you!</strong></p>
+            <p><strong>💌 We can't wait to celebrate with you!</strong></p>
           </div>
         </section>
 
@@ -225,43 +426,117 @@ const HomePage = ({ eventData }) => {
         </section>
 
         <section id="contact-info" className="section" data-bg="/ContactBackground.jpg">
-          <div className="container">
+          <div className="section-transition top"></div>
+          <div className="contact-container">
             <div className="contact-header">
-              <h2>📞 Contact Us</h2>
-              <p>Have questions about the wedding? We’d love to help!</p>
+              <div className="section-title">
+                <span className="title-decoration">💌</span>
+                <h2>Stay Connected</h2>
+                <span className="title-decoration">💌</span>
+              </div>
+              <p className="contact-subtitle">"We'd love to hear from you and answer any questions!"</p>
             </div>
-            <div className="contact-grid">
-              <div className="contact-details">
-                <div className="info">
-                  <h3>📍 Venue Address</h3>
-                  <p>123 Wedding Lane, City, ZIP</p>
+            
+            <div className="contact-content">
+              <div className="contact-info-cards">
+                <div className="contact-card venue-card">
+                  <div className="card-icon">🏰</div>
+                  <h3>Venue Address</h3>
+                  <div className="card-content">
+                    <p>Zee Garden Function Hall</p>
+                    <p>123 Wedding Lane, City, ZIP</p>
+                    <a href="#" className="venue-direction-btn">
+                      <span>Get Directions</span>
+                      <span className="btn-icon">🗺️</span>
+                    </a>
+                  </div>
                 </div>
-                <div className="info">
-                  <h3>📧 Email</h3>
-                  <p><a href="mailto:yourwedding@email.com">yourwedding@email.com</a></p>
+
+                <div className="contact-card connect-card">
+                  <div className="card-icon">📱</div>
+                  <h3>Connect With Us</h3>
+                  <div className="card-content">
+                    <div className="contact-method">
+                      <span className="method-icon">📧</span>
+                      <a href="mailto:yourwedding@email.com">yourwedding@email.com</a>
+                    </div>
+                    <div className="contact-method">
+                      <span className="method-icon">📞</span>
+                      <a href="tel:+17746360392">+1 774-636-0392</a>
+                    </div>
+                    <div className="contact-method">
+                      <span className="method-icon">💬</span>
+                      <a href="https://wa.me/17746360392">WhatsApp Us</a>
+                    </div>
+                  </div>
                 </div>
-                <div className="info">
-                  <h3>📱 Call / WhatsApp</h3>
-                  <p><a href="tel:+17746360392">+1 774-636-0392</a></p>
-                </div>
-                <div className="social-links">
-                  <a href="https://wa.me/17746360392" target="_blank">📱 WhatsApp</a>
-                  <a href="https://www.instagram.com/yourprofile" target="_blank">📸 Instagram</a>
-                  <a href="https://www.facebook.com/yourpage" target="_blank">📘 Facebook</a>
+
+                <div className="contact-card social-card">
+                  <div className="card-icon">🌟</div>
+                  <h3>Follow Our Journey</h3>
+                  <div className="card-content">
+                    <div className="social-links">
+                      <a href="https://www.instagram.com/yourprofile" className="social-link instagram">
+                        <span className="social-icon">📸</span>
+                        <span>Instagram</span>
+                      </a>
+                      <a href="https://www.facebook.com/yourpage" className="social-link facebook">
+                        <span className="social-icon">📘</span>
+                        <span>Facebook</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="contact-form">
-                <h3>💌 Send Us a Message</h3>
-                <form onSubmit={handleSubmit}>
-                  <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
-                  <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
-                  <textarea name="message" placeholder="Type your message..." value={formData.message} onChange={handleChange} required />
-                  <button type="submit">Send Message</button>
-                  {status && <p>{status}</p>}
+
+              <div className="contact-form-container">
+                <div className="form-header">
+                  <h3>Send Us a Message</h3>
+                  <p>We'll get back to you as soon as possible!</p>
+                </div>
+                <form onSubmit={handleSubmit} className="animated-form">
+                  <div className="form-group">
+                    <input 
+                      type="text" 
+                      name="name" 
+                      placeholder="Your Name" 
+                      value={formData.name} 
+                      onChange={handleChange} 
+                      required 
+                    />
+                    <span className="form-icon">👤</span>
+                  </div>
+                  <div className="form-group">
+                    <input 
+                      type="email" 
+                      name="email" 
+                      placeholder="Your Email" 
+                      value={formData.email} 
+                      onChange={handleChange} 
+                      required 
+                    />
+                    <span className="form-icon">✉️</span>
+                  </div>
+                  <div className="form-group">
+                    <textarea 
+                      name="message" 
+                      placeholder="Your Message..." 
+                      value={formData.message} 
+                      onChange={handleChange} 
+                      required 
+                    />
+                    <span className="form-icon">✏️</span>
+                  </div>
+                  <button type="submit" className="submit-btn">
+                    <span>Send Message</span>
+                    <span className="btn-icon">💌</span>
+                  </button>
+                  {status && <div className="form-status">{status}</div>}
                 </form>
               </div>
             </div>
           </div>
+          <div className="section-transition bottom"></div>
         </section>
       
     </>
